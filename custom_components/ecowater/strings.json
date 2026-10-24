@@ -1,0 +1,40 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "添加怡口软水机",
+        "description": "输入设备的 MAC 地址和微信 openid（openid 用于自动获取 token，不会过期）",
+        "data": {
+          "mac": "设备 MAC（无冒号大写）",
+          "openid": "微信 openid（抓包获取）",
+          "customer": "手机号（绑定设备的账号）",
+          "ip": "设备 IP（配网用）",
+          "device_password": "设备 Web 界面密码（留空用通用密码）"
+        }
+      }
+    },
+    "error": {
+      "invalid_input": "MAC 或 openid 不能为空",
+      "cannot_connect": "无法连接怡口云服务器，请检查 MAC 和 openid 是否正确"
+    },
+    "abort": {
+      "already_configured": "该设备已配置"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "重新配网",
+        "description": "输入新的 WiFi SSID 和密码。提交后设备会断开当前 WiFi 并连接新网络，请确保新 WiFi 是 2.4GHz。",
+        "data": {
+          "ssid": "WiFi SSID",
+          "password": "WiFi 密码"
+        }
+      }
+    },
+    "error": {
+      "invalid_ssid": "WiFi SSID 不能为空",
+      "reconfig_fail": "配网失败，请检查设备 IP 和网络连接"
+    }
+  }
+}
